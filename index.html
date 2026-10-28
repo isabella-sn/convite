@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0B0518">
+<title>Convite de Aniversário 🏐🎸</title>
+<meta property="og:title" content="Você foi convocado(a)! 🏖️">
+<meta property="og:description" content="Aniversário na praia: 18 a 20 de Dezembro. Abre e confirma sua presença!">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0B0518; --card:rgba(24,24,34,.88); --graphite:#1E1E28;
+  --purple:#A855F7; --cyan:#06B6D4; --green:#10B981; --amber:#FBBF24;
+  --text:#F3F4F6; --muted:#9CA3AF;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--sans);background:var(--bg);color:var(--text);
+  min-height:100vh;min-height:100dvh;
+  display:flex;align-items:center;justify-content:center;
+  padding:max(14px,env(safe-area-inset-top)) max(14px,env(safe-area-inset-right)) max(14px,env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left));
+  overflow-x:hidden;
+  background-image:radial-gradient(900px 500px at 50% -10%,rgba(168,85,247,.28),transparent 70%),radial-gradient(600px 400px at 100% 100%,rgba(6,182,212,.14),transparent 70%);
+  background-attachment:fixed;
+}
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.35}
+main{position:relative;z-index:1;width:100%;max-width:440px}
+.bar{display:flex;justify-content:space-between;font:11px var(--mono);color:rgba(168,85,247,.85);padding:0 6px 8px}
+.bar b{color:var(--green);font-weight:700}
+.card{
+  background:var(--card);border:1px solid rgba(168,85,247,.3);border-radius:24px;padding:22px 18px;text-align:center;
+  box-shadow:0 0 40px rgba(139,92,246,.18),inset 0 0 18px rgba(168,85,247,.06);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+}
+.icons{font-size:30px;letter-spacing:6px;margin-bottom:10px}
+.icons span{display:inline-block;animation:hop 2.4s ease-in-out infinite}
+.icons span:nth-child(2){animation-delay:.2s}.icons span:nth-child(3){animation-delay:.4s}.icons span:nth-child(4){animation-delay:.6s}
+@keyframes hop{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-8px)}}
+h1{font-size:clamp(25px,8vw,34px);font-weight:800;line-height:1.1;text-shadow:0 0 14px rgba(168,85,247,.65)}
+h2{font-size:clamp(21px,6.5vw,27px);font-weight:800;line-height:1.2;margin-bottom:6px}
+.sub{color:var(--muted);font-size:14px;line-height:1.5;margin:8px 0 18px}
+.cy{color:var(--cyan)} .pu{color:var(--purple)}
+.quest{display:inline-block;font:700 11px var(--mono);color:var(--purple);background:rgba(168,85,247,.12);border:1px solid rgba(168,85,247,.35);border-radius:999px;padding:5px 12px;margin-bottom:12px}
+input{
+  width:100%;padding:15px 14px;border-radius:16px;border:1px solid rgba(168,85,247,.45);background:var(--graphite);
+  color:#fff;font:600 17px var(--sans);text-align:center;outline:none;margin-bottom:12px
+}
+input:focus{box-shadow:0 0 0 3px rgba(168,85,247,.5)}
+input::placeholder{color:#6B7280}
+.btn{
+  display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:52px;padding:14px 18px;border:0;border-radius:16px;
+  color:#fff;font:700 16px var(--sans);text-decoration:none;cursor:pointer;touch-action:manipulation;
+  transition:transform .12s;box-shadow:0 6px 18px rgba(0,0,0,.35)
+}
+.btn:active{transform:scale(.96)}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+.go{background:linear-gradient(90deg,var(--purple),#7C3AED 50%,var(--cyan))}
+.yes{background:linear-gradient(90deg,#10B981,#0D9488)}
+.wa{background:#22C55E}
+.panel{background:rgba(30,30,40,.75);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:14px;text-align:left;margin-bottom:14px}
+.row{display:flex;gap:12px;align-items:flex-start}
+.row+.row{margin-top:14px}
+.ico{flex:none;width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-size:19px;background:rgba(168,85,247,.18)}
+.row:nth-child(2) .ico{background:rgba(6,182,212,.18)}
+.lbl{font:11px var(--mono);color:var(--muted)}
+.val{font-weight:700;font-size:15px;line-height:1.35}
+.small{font-size:12px;color:#D1D5DB;line-height:1.4}
+.small a{color:var(--cyan);font-weight:600}
+.byob{display:flex;gap:12px;align-items:center;text-align:left;background:rgba(251,191,36,.09);border:1px solid rgba(251,191,36,.35);border-radius:16px;padding:12px;margin-bottom:18px;font-size:13px;color:#D1D5DB;line-height:1.4}
+.byob i{font-style:normal;font-size:26px}
+.byob b{color:#fff}
+.byob em{display:block;font:700 11px var(--mono);color:var(--amber);font-style:normal;margin-bottom:2px}
+.ask{font-weight:700;font-size:16px;margin-bottom:12px}
+.choices{display:flex;flex-direction:column;align-items:center;gap:12px;min-height:120px}
+#no{
+  position:relative;z-index:5;width:100%;min-height:46px;padding:12px 18px;border-radius:16px;
+  background:var(--graphite);border:1px solid rgba(255,255,255,.14);color:var(--muted);font:600 14px var(--sans);
+  cursor:pointer;touch-action:manipulation;white-space:nowrap;
+  transition:transform .28s cubic-bezier(.34,1.56,.64,1)
+}
+#no.jumped{width:auto;min-width:150px}
+.loadout{font:12px/1.9 var(--mono);color:#D1D5DB}
+.loadout li{list-style:none}
+.loadout li::before{content:"✔ ";color:var(--green)}
+.big{font-size:56px;margin-bottom:8px}
+.link{background:none;border:0;color:var(--cyan);font:600 14px var(--sans);text-decoration:underline;margin-top:14px;padding:10px;cursor:pointer}
+.note{font-size:12px;color:#6B7280;margin-top:10px}
+@media (prefers-reduced-motion:reduce){.icons span{animation:none}#no{transition:none}}
+</style>
+</head>
+<body>
+<canvas id="bg"></canvas>
+
+<main>
+  <div class="bar"><span>&lt;evento&gt;aniversario_praia&lt;/evento&gt;</span><span>status: <b>online</b></span></div>
+
+  <!-- 1. NOME -->
+  <section id="s-name" class="card">
+    <div class="icons" aria-hidden="true"><span>👨‍💻</span><span>🎸</span><span>🏐</span><span>🎮</span></div>
+    <h1>Convite de aniversário</h1>
+    <p class="sub">Digite seu nome para liberar os detalhes da festa na praia 🏖️</p>
+    <form id="form-name" autocomplete="off">
+      <input id="guest" type="text" placeholder="Seu nome ou apelido..." required maxlength="40" enterkeyhint="go">
+      <button class="btn go" type="submit">Acessar convite</button>
+    </form>
+  </section>
+
+  <!-- 2. CONVITE -->
+  <section id="s-invite" class="card" hidden>
+    <span class="quest">🏆 NOVA MISSÃO DESBLOQUEADA</span>
+    <h2>Fala, <span id="n1" class="cy">Convidado</span>! 🔥</h2>
+    <p class="sub">Joguinhos e muuuuuita resenha. Bora comemorar!</p>
+
+    <div class="panel">
+      <div class="row">
+        <div class="ico">📅</div>
+        <div><div class="lbl">DATA</div><div class="val">18 a 20 de Dezembro</div><div class="small">Fim de semana completo.</div></div>
+      </div>
+      <div class="row">
+        <div class="ico">⏰</div>
+        <div><div class="lbl">INÍCIO</div><div class="val">A partir das 15:00h</div></div>
+      </div>
+      <div class="row">
+        <div class="ico">📍</div>
+        <div>
+          <div class="lbl">LOCAL</div>
+          <div class="val">Casa de Praia em Enseadas</div>
+          <div class="small">Rua Vi Vinte e Quatro, 117 · <a href="https://maps.google.com/?q=Rua+Vi+Vinte+e+Quatro,+117,+Enseadas" target="_blank" rel="noopener">Abrir no Maps</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="byob"><i>🍺</i><div><em>Cachaça</em>Quem for beber álcool, <b>traga a própria bebida!</b></div></div>
+
+    <p class="ask">Confirmado no rolê?</p>
+    <div class="choices">
+      <button id="yes" class="btn yes" type="button">✅ Com certeza, tô dentro!</button>
+      <button id="no" type="button">Não posso ir</button>
+    </div>
+  </section>
+
+  <!-- 3. CONFIRMADO -->
+  <section id="s-yes" class="card" hidden>
+    <div class="big">🏖️</div>
+    <h2>Presença confirmada! 🔥</h2>
+    <p class="sub">Boa, <b id="n2" class="pu">Convidado</b>! Sua vaga em Enseadas tá garantida.</p>
+    <div class="panel"><ul class="loadout">
+      <li>Roupa leve e roupa de banho</li>
+      <li>Protetor solar e sua bebida</li>
+    </ul></div>
+    <a id="wa-yes" class="btn wa" target="_blank" rel="noopener">💬 Enviar confirmação no Zap</a>
+    <p class="note">Toque para abrir o WhatsApp com a mensagem pronta.</p>
+  </section>
+
+  <!-- 4. NÃO VOU -->
+  <section id="s-no" class="card" hidden>
+    <div class="big">😢</div>
+    <h2>Poxa, vamos sentir sua falta!</h2>
+    <p class="sub"><b id="n3" class="pu">Convidado</b>, avisa o anfitrião para ele saber que você não vai conseguir ir.</p>
+    <a id="wa-no" class="btn wa" target="_blank" rel="noopener">💬 Avisar no Zap</a>
+    <p class="note">O WhatsApp abre com a mensagem pronta. É só enviar.</p>
+    <button id="back" class="link" type="button">Mudei de ideia, tô dentro! 🏐</button>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+// ====== CONFIG ======
+const HOST_PHONE = "5581982740135"; // número do anfitrião com DDI+DDD
+// ====================
+
+const $ = id => document.getElementById(id);
+let guest = "";
+
+// ---- Áudio (liberado no primeiro toque, exigência do iOS) ----
+let ac = null;
+function audio(){
+  try{
+    ac = ac || new (window.AudioContext || window.webkitAudioContext)();
+    if (ac.state === 'suspended') ac.resume();
+  }catch(e){}
+}
+document.addEventListener('pointerdown', audio, {once:true});
+function tone(freqs, type, gain, step, len){
+  if(!ac) return;
+  try{
+    freqs.forEach((f,i)=>{
+      const t = ac.currentTime + i*step, o = ac.createOscillator(), g = ac.createGain();
+      o.type = type; o.frequency.setValueAtTime(f,t);
+      g.gain.setValueAtTime(gain,t); g.gain.exponentialRampToValueAtTime(.001,t+len);
+      o.connect(g); g.connect(ac.destination); o.start(t); o.stop(t+len);
+    });
+  }catch(e){}
+}
+const sndBeep = () => tone([587,880],'sine',.2,.08,.12);
+const sndJump = () => tone([300,150],'triangle',.12,.06,.1);
+const sndWin  = () => tone([330,392,494,587,659],'sawtooth',.12,.08,.35);
+const sndSad  = () => tone([392,330,262],'triangle',.15,.18,.4);
+
+function show(id){
+  ['s-name','s-invite','s-yes','s-no'].forEach(s => $(s).hidden = (s !== id));
+  window.scrollTo(0,0);
+}
+function waLink(text){ return `https://wa.me/${HOST_PHONE}?text=${encodeURIComponent(text)}`; }
+
+// ---- 1. Nome ----
+$('form-name').addEventListener('submit', e => {
+  e.preventDefault(); audio();
+  guest = $('guest').value.trim();
+  if(!guest) return;
+  ['n1','n2','n3'].forEach(id => $(id).textContent = guest);
+  show('s-invite'); sndBeep();
+});
+
+// ---- 2. Confirmar ----
+function accept(){
+  audio();
+  $('wa-yes').href = waLink(`Fala! Sou ${guest}, estou CONFIRMADO(A) no aniversário na praia em Enseadas (18 a 20 de Dezembro)!`);
+  show('s-yes'); sndWin();
+  if (typeof confetti === 'function'){
+    const end = Date.now() + 2500;
+    (function f(){
+      const colors = ['#A855F7','#06B6D4','#10B981','#EC4899'];
+      confetti({particleCount:5,angle:60,spread:55,origin:{x:0},colors});
+      confetti({particleCount:5,angle:120,spread:55,origin:{x:1},colors});
+      if (Date.now() < end) requestAnimationFrame(f);
+    })();
+  }
+}
+$('yes').addEventListener('click', accept);
+$('back').addEventListener('click', accept);
+
+// ---- 3. Botão "Não posso ir": pula UMA vez e depois vale de verdade ----
+const no = $('no');
+let jumped = false, lastJump = 0;
+
+function jump(){
+  jumped = true; lastJump = Date.now();
+  no.textContent = 'Não posso mesmo 😢';
+  no.classList.add('jumped');
+  no.style.transform = 'none';
+
+  const r = no.getBoundingClientRect();
+  const y = $('yes').getBoundingClientRect();
+  const pad = 14, w = r.width, h = r.height;
+  const maxL = Math.max(pad, innerWidth - w - pad);
+  const maxT = Math.max(pad, innerHeight - h - pad);
+  let L = r.left, T = r.top;
+
+  for (let i = 0; i < 40; i++){
+    const l = pad + Math.random() * (maxL - pad);
+    const t = pad + Math.random() * (maxT - pad);
+    const hitsYes = l < y.right + 8 && l + w > y.left - 8 && t < y.bottom + 8 && t + h > y.top - 8;
+    const farEnough = Math.hypot(l - r.left, t - r.top) > 110;
+    if (!hitsYes && farEnough){ L = l; T = t; break; }
+  }
+  no.style.transform = `translate(${L - r.left}px, ${T - r.top}px)`;
+  sndJump();
+}
+
+function decline(){
+  audio();
+  $('wa-no').href = waLink(`Fala! Sou ${guest}, infelizmente NÃO vou conseguir ir no aniversário e vou broxar por 7 anos seguidos. Mas valeu pelo convite!`);
+  show('s-no'); sndSad();
+}
+
+// mouse: pula quando o cursor chega perto; toque: pula no primeiro toque
+no.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse' && !jumped) jump(); });
+no.addEventListener('pointerdown', e => {
+  if (e.pointerType !== 'mouse' && !jumped){ e.preventDefault(); audio(); jump(); }
+});
+no.addEventListener('click', () => {
+  if (Date.now() - lastJump < 600) return; // ignora o clique "fantasma" do mesmo gesto
+  if (!jumped){ audio(); jump(); return; } // teclado ou fallback
+  decline();
+});
+
+// ---- Fundo animado ----
+const cv = $('bg'), ctx = cv.getContext('2d');
+const syms = ['</>','{ }','party()','beer++','🎸','🏐','🌊','♫','0101','🏖️','🎮','git push'];
+let items = [];
+function size(){ cv.width = innerWidth; cv.height = innerHeight; }
+size();
+addEventListener('resize', size);
+const count = innerWidth < 640 ? 18 : 34;
+for (let i = 0; i < count; i++) items.push({
+  x: Math.random()*innerWidth, y: Math.random()*innerHeight,
+  s: syms[Math.floor(Math.random()*syms.length)],
+  v: .25 + Math.random()*.55, z: 12 + Math.random()*12, o: .25 + Math.random()*.4
+});
+const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+function draw(){
+  ctx.clearRect(0,0,cv.width,cv.height);
+  for (const it of items){
+    ctx.fillStyle = `rgba(168,85,247,${it.o})`;
+    ctx.font = `${it.z}px "JetBrains Mono", monospace`;
+    ctx.fillText(it.s, it.x, it.y);
+    if (!still) it.y -= it.v;
+    if (it.y < -20){ it.y = cv.height + 20; it.x = Math.random()*cv.width; }
+  }
+  if (!still) requestAnimationFrame(draw);
+}
+draw();
+</script>
+</body>
+</html>

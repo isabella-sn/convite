@@ -75,6 +75,8 @@ input::placeholder{color:#6B7280}
 .small{font-size:12px;color:#D1D5DB;line-height:1.4}
 .small a{color:var(--cyan);font-weight:600}
 .byob{display:flex;gap:12px;align-items:center;text-align:left;background:rgba(251,191,36,.09);border:1px solid rgba(251,191,36,.35);border-radius:16px;padding:12px;margin-bottom:18px;font-size:13px;color:#D1D5DB;line-height:1.4}
+.byob.food{background:rgba(16,185,129,.09);border-color:rgba(16,185,129,.35);margin-bottom:10px}
+.byob.food em{color:var(--green)}
 .byob i{font-style:normal;font-size:26px}
 .byob b{color:#fff}
 .byob em{display:block;font:700 11px var(--mono);color:var(--amber);font-style:normal;margin-bottom:2px}
@@ -122,7 +124,15 @@ input::placeholder{color:#6B7280}
     <div class="panel">
       <div class="row">
         <div class="ico">📅</div>
-        <div><div class="lbl">DATA</div><div class="val">18 a 20 de Dezembro</div><div class="small">Fim de semana completo.</div></div>
+        <div><div class="lbl">DATA</div><div class="val">18 a 20 de Dezembro</div><div class="small">Fim de semana completo, de sexta a domingo.</div></div>
+      </div>
+      <div class="row">
+        <div class="ico">🎂</div>
+        <div><div class="lbl">COMEMORAÇÃO</div><div class="val">Sábado, 19 de Dezembro</div><div class="small">Vai só passar o dia? Cola no <b>sábado</b>, que é o dia da festa!</div></div>
+      </div>
+      <div class="row">
+        <div class="ico">🌙</div>
+        <div><div class="lbl">SÁBADO À NOITE</div><div class="val">Festa do Pijama 😴</div><div class="small">Dress code: <b>pijama</b>!</div></div>
       </div>
       <div class="row">
         <div class="ico">⏰</div>
@@ -138,6 +148,7 @@ input::placeholder{color:#6B7280}
       </div>
     </div>
 
+    <div class="byob food"><i>🍖</i><div><em>Comes e bebes</em>Vai ter <b>comida, água e refrigerante</b>. Quem quiser, pode trazer uma carne pro <b>churrasco</b>!</div></div>
     <div class="byob"><i>🍺</i><div><em>Cachaça</em>Quem for beber álcool, <b>traga a própria bebida!</b></div></div>
 
     <p class="ask">Confirmado no rolê?</p>
@@ -155,6 +166,8 @@ input::placeholder{color:#6B7280}
     <div class="panel"><ul class="loadout">
       <li>Roupa leve e roupa de banho</li>
       <li>Protetor solar e sua bebida</li>
+      <li>Pijama pra festa de sábado à noite</li>
+      <li>Uma carne pro churrasco (opcional)</li>
     </ul></div>
     <a id="wa-yes" class="btn wa" target="_blank" rel="noopener">💬 Enviar confirmação no Zap</a>
     <p class="note">Toque para abrir o WhatsApp com a mensagem pronta.</p>
@@ -223,7 +236,17 @@ $('form-name').addEventListener('submit', e => {
 // ---- 2. Confirmar ----
 function accept(){
   audio();
-  $('wa-yes').href = waLink(`Fala! Sou ${guest}, estou CONFIRMADO(A) no aniversário na praia em Enseadas (18 a 20 de Dezembro)!`);
+  $('wa-yes').href = waLink(
+`Fala! Sou ${guest}, estou CONFIRMADO(A) no aniversário na praia em Enseadas!
+
+*Resumo do rolê:*
+- Data: de 18 a 20 de Dezembro (sexta a domingo), a partir das 15h
+- Local: Casa de Praia em Enseadas, Rua Vi Vinte e Quatro, 117
+- Maps: https://maps.google.com/?q=Rua+Vi+Vinte+e+Quatro,+117,+Enseadas
+- Quem for só passar o dia/curtir a festa: sábado, dia 19
+- Sábado à noite tem festa do pijama, dress code: PIJAMA
+- Vai ter comida, água e refri. Quem quiser pode levar uma carne pro churrasco
+- Bebida alcoólica: cada um leva a sua`);
   show('s-yes'); sndWin();
   if (typeof confetti === 'function'){
     const end = Date.now() + 2500;

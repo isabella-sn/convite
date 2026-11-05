@@ -170,7 +170,7 @@ input::placeholder{color:#6B7280}
       <li>Uma carne pro churrasco (opcional)</li>
     </ul></div>
     <a id="wa-yes" class="btn wa" target="_blank" rel="noopener">💬 Enviar confirmação no Zap</a>
-    <p class="note">Toque para abrir o WhatsApp com a mensagem pronta.</p>
+    <p class="note">O WhatsApp abre sozinho com a mensagem pronta. Se não abrir, toque no botão.</p>
   </section>
 
   <!-- 4. NÃO VOU -->
@@ -245,9 +245,11 @@ function accept(){
 - Maps: https://maps.app.goo.gl/K5uaSk8wh7feZCYF9?g_st=ic
 - Quem for só passar o dia/curtir a festa: sábado, dia 19
 - Sábado à noite tem festa do pijama, dress code: PIJAMA
-- Vai ter comida, água e refri. Quem quiser pode levar uma carne pro churrasco
-- Bebida alcoólica: cada um leva a sua`);
+- Bebida alcoólica: cada um leva a sua
+- Vai ter comida, água e refri. Quem quiser pode levar uma carne pro churrasco`);
   show('s-yes'); sndWin();
+  // abre o WhatsApp direto (o botão fica como reserva caso o navegador bloqueie)
+  window.open($('wa-yes').href, '_blank', 'noopener');
   if (typeof confetti === 'function'){
     const end = Date.now() + 2500;
     (function f(){
